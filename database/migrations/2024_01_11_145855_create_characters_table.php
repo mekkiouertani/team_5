@@ -16,11 +16,11 @@ return new class extends Migration {
                 $table->id();
                 $table->string('name', 200);
                 $table->text('description')->nullable();
-                $table->int('type_id');
-                $table->int('attack');
-                $table->int('defence');
-                $table->int('speed');
-                $table->int('life');
+                $table->integer('type_id');
+                $table->integer('attack');
+                $table->integer('defence');
+                $table->integer('speed');
+                $table->integer('life');
                 $table->timestamps();
             }
         );
