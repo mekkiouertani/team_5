@@ -5,6 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
+
     /**
      * Run the migrations.
      */
@@ -12,7 +13,13 @@ return new class extends Migration {
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name', 30);
+            $table->text('description')->nullable();
+            $table->string('slug', 200);
+            $table->string('category', 100);
+            $table->string('type', 100);
+            $table->string('weight', 10);
+            $table->string('cost', 20);
         });
     }
 
