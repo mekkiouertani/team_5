@@ -12,6 +12,6 @@ class CharacterSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+
     }
 }
