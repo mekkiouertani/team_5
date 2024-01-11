@@ -202,3 +202,11 @@ Route::fallback(function() {
 });
 
 ```
+
+PROGETTO GRUPPO 5.
+#1file per il seeder : crea cartella data in cartella seeder
+$json = file_get_contents(__DIR__ . data json );
+$content = json_decode($json,true);
+e poi for each $content as itemdata e creiamo model
+$item = new Item();
+$item save
