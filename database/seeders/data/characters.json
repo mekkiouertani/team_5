@@ -1,0 +1,182 @@
+[
+    {
+      "name": "Gideon Ironheart",
+      "description": "A fearless knight known for his unwavering resolve.",
+      "type_id": 1,
+      "attack": 90,
+      "defence": 75,
+      "speed": 60,
+      "life": 110
+    },
+    {
+      "name": "Sylanna Shadowblade",
+      "description": "A stealthy rogue with deadly precision.",
+      "type_id": 2,
+      "attack": 80,
+      "defence": 55,
+      "speed": 95,
+      "life": 85
+    },
+    {
+      "name": "Ignis Firecaster",
+      "description": "A masterful mage wielding the power of fire.",
+      "type_id": 3,
+      "attack": 95,
+      "defence": 40,
+      "speed": 70,
+      "life": 95
+    },
+    {
+      "name": "Thalia Swiftwind",
+      "description": "An agile elf archer with unparalleled speed.",
+      "type_id": 2,
+      "attack": 75,
+      "defence": 50,
+      "speed": 100,
+      "life": 80
+    },
+    {
+      "name": "Darius Stoneshield",
+      "description": "A stoic dwarf defender with a mighty shield.",
+      "type_id": 1,
+      "attack": 85,
+      "defence": 90,
+      "speed": 45,
+      "life": 120
+    },
+    {
+      "name": "Luna Moonshadow",
+      "description": "A mystical sorceress attuned to the moon's magic.",
+      "type_id": 3,
+      "attack": 85,
+      "defence": 35,
+      "speed": 75,
+      "life": 90
+    },
+    {
+      "name": "Aurelius Stormbringer",
+      "description": "A charismatic paladin with lightning-infused attacks.",
+      "type_id": 1,
+      "attack": 88,
+      "defence": 70,
+      "speed": 55,
+      "life": 105
+    },
+    {
+      "name": "Fiona Frostheart",
+      "description": "An ice mage capable of freezing enemies in their tracks.",
+      "type_id": 3,
+      "attack": 80,
+      "defence": 45,
+      "speed": 65,
+      "life": 100
+    },
+    {
+      "name": "Cyrus Darkblade",
+      "description": "A brooding and powerful dark knight seeking redemption.",
+      "type_id": 1,
+      "attack": 92,
+      "defence": 60,
+      "speed": 50,
+      "life": 115
+    },
+    {
+      "name": "Seraphina Sunfire",
+      "description": "A radiant cleric healing allies with divine energy.",
+      "type_id": 4,
+      "attack": 75,
+      "defence": 50,
+      "speed": 80,
+      "life": 95
+    },
+    {
+      "name": "Ragnar Thunderaxe",
+      "description": "A burly barbarian wielding a massive thundering axe.",
+      "type_id": 1,
+      "attack": 94,
+      "defence": 65,
+      "speed": 40,
+      "life": 125
+    },
+    {
+      "name": "Lyra Starfall",
+      "description": "An enigmatic celestial mage with star-infused spells.",
+      "type_id": 3,
+      "attack": 85,
+      "defence": 40,
+      "speed": 70,
+      "life": 90
+    },
+    {
+      "name": "Kai Shadowsong",
+      "description": "A nimble and deadly ninja moving in the shadows.",
+      "type_id": 2,
+      "attack": 78,
+      "defence": 48,
+      "speed": 92,
+      "life": 82
+    },
+    {
+      "name": "Isabella Ironrose",
+      "description": "A skilled duelist with a combination of grace and strength.",
+      "type_id": 2,
+      "attack": 85,
+      "defence": 55,
+      "speed": 88,
+      "life": 88
+    },
+    {
+      "name": "Lucius Blackthorn",
+      "description": "A mysterious warlock harnessing the power of shadows.",
+      "type_id": 3,
+      "attack": 90,
+      "defence": 38,
+      "speed": 68,
+      "life": 92
+    },
+    {
+      "name": "Elysia Moonlight",
+      "description": "A moonlit archer with a mystical connection to nature.",
+      "type_id": 2,
+      "attack": 82,
+      "defence": 50,
+      "speed": 98,
+      "life": 85
+    },
+    {
+      "name": "Orik Thunderfist",
+      "description": "A dwarf berserker fueled by the power of thunder.",
+      "type_id": 1,
+      "attack": 96,
+      "defence": 62,
+      "speed": 42,
+      "life": 118
+    },
+    {
+      "name": "Aria Stormshaper",
+      "description": "A tempest sorceress controlling the fury of storms.",
+      "type_id": 3,
+      "attack": 88,
+      "defence": 42,
+      "speed": 72,
+      "life": 94
+    },
+    {
+      "name": "Kieran Frostwind",
+      "description": "A swift and agile rogue with an icy touch.",
+      "type_id": 2,
+      "attack": 79,
+      "defence": 52,
+      "speed": 94,
+      "life": 84
+    },
+    {
+      "name": "Valeria Swiftstrike",
+      "description": "A dual-wielding warrior with unmatched speed in combat.",
+      "type_id": 1,
+      "attack": 87,
+      "defence": 68,
+      "speed": 58,
+      "life": 108
+    }
+  ]
