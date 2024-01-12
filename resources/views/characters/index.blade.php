@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @php
+    // to use later for sidebar
     $sidebar = [
         [
             'title' => 'BOARD',

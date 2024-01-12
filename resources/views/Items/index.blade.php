@@ -1,0 +1,24 @@
+@extends('layouts.app')
+
+
+@section('content')
+    <a href="{{ route('item.create') }}" style="margin-bottom: 40px; color:red;">
+        create a new item
+    </a>
+
+    @foreach ($items as $item)
+        <div>
+            {{ $item['name'] }}
+        </div>
+        <a href="{{ route('item.show', $item->id) }}">
+            info
+        </a>
+        <form action="{{ route('item.destroy', $item->id) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button class="btn btn-danger" type="submit">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+        </form>
+    @endforeach
+@endsection
