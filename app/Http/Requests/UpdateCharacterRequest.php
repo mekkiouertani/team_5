@@ -11,7 +11,7 @@ class UpdateCharacterRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,21 @@ class UpdateCharacterRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|max:200',
+
+            'type_id' => 'required|integer',
+            'attack' => 'required|integer',
+            'defence' => 'required|integer',
+            'speed' => 'required|integer',
+            'life' => 'required|integer',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            '*' => 'qualcosa è andato storto',
+            'life.required' => 'life è required',
         ];
     }
 }
