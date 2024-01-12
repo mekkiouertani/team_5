@@ -5,7 +5,6 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
-
     /**
      * Run the migrations.
      */
@@ -20,6 +19,7 @@ return new class extends Migration {
             $table->string('type', 100);
             $table->string('weight', 10);
             $table->string('cost', 20);
+            $table->timestamps();
         });
     }
 
