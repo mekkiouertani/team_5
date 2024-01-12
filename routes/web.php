@@ -6,7 +6,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ComicController;
 use App\Http\Controllers\CharacterController;
 use App\Http\Controllers\ItemController;
-use App\Http\Controllers\TypesController;
+use App\Http\Controllers\TypeController;
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Character;
@@ -41,7 +41,7 @@ Route::middleware('auth')->group(function () {
 //added resourcecontroller
 Route::resource('character', CharacterController::class);
 Route::resource('item', ItemController::class);
-Route::resource('type', TypesController::class);
+Route::resource('type', TypeController::class);
 
 require __DIR__ . '/auth.php';
 

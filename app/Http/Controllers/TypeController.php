@@ -2,18 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\types;
-use App\Http\Requests\StoretypesRequest;
-use App\Http\Requests\UpdatetypesRequest;
+use App\Models\Type;
+use App\Http\Requests\StoreTypeRequest;
+use App\Http\Requests\UpdateTypeRequest;
 
-class TypesController extends Controller
+class TypeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $types = Type::all();
+        return view('types.index', compact('types'));
     }
 
     /**
@@ -27,7 +28,7 @@ class TypesController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoretypesRequest $request)
+    public function store(StoreTypeRequest $request)
     {
         //
     }
@@ -35,7 +36,7 @@ class TypesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(types $types)
+    public function show(Type $type)
     {
         //
     }
@@ -43,7 +44,7 @@ class TypesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(types $types)
+    public function edit(Type $type)
     {
         //
     }
@@ -51,7 +52,7 @@ class TypesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatetypesRequest $request, types $types)
+    public function update(UpdateTypeRequest $request, Type $type)
     {
         //
     }
@@ -59,7 +60,7 @@ class TypesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(types $types)
+    public function destroy(Type $type)
     {
         //
     }

@@ -19,3 +19,11 @@ h1 {
     width: 100px;
     color: white;
 }
+
+.nav-link.active {
+    font-weight: bold;
+    border-bottom: 1px solid red ;
+}
+body{
+    background: linear-gradient(90deg, hsla(307, 93%, 84%, 1) 0%, hsla(256, 96%, 44%, 1) 100%);
+}

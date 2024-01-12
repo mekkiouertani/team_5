@@ -47,9 +47,10 @@
         <form action="{{ route('character.destroy', $character->id) }}" method="POST">
             @csrf
             @method('DELETE')
-            <button class="btn btn-danger" type="submit">
+            <button class="btn btn-danger cancel-button" type="submit">
                 <i class="fa-solid fa-trash"></i>
             </button>
         </form>
     @endforeach
+    @include('partials.modal_delete')
 @endsection
