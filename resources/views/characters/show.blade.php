@@ -3,6 +3,8 @@
 @section('content')
 <h1>show printing data</h1>
 
+
+
 <div>{{ $character['name'] }}</div>
 <div>{{ $character['description'] }}</div>
 <div>{{ $character['type_id'] }}</div>
@@ -13,8 +15,19 @@
 <form action="{{ route('character.destroy', $character->id) }}" method="POST">
     @csrf
     @method('DELETE')
-    <div class="btn btn-danger" type="submit">
+    <button class="btn btn-danger" type="submit">
         <i class="fa-solid fa-trash"></i>
-    </div>
+    </button>
 </form>
+
+<form action="{{ route('character.edit', $character->id) }}" method="GET">
+    @csrf
+    <button class="btn btn-warning" type="submit">
+        <i class="fa-solid fa-wrench"></i>
+    </button>
+</form>
+
+<a href="{{ route('character.index') }}" style="margin-bottom: 40px; color:red;">
+       back
+</a>
 @endsection

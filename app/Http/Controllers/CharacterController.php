@@ -70,6 +70,7 @@ class CharacterController extends Controller
     public function destroy(Character $character)
     {
         $character->delete();
+
         return to_route('character.index')->with('message', "il fumetto $character->title è stato eliminato");
     }
 }
