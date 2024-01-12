@@ -22,8 +22,7 @@ class UpdateCharacterRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|max:200',
-
+            'name' => 'required|max:200|min:10',
             'type_id' => 'required|integer',
             'attack' => 'required|integer',
             'defence' => 'required|integer',
@@ -35,8 +34,13 @@ class UpdateCharacterRequest extends FormRequest
     public function messages()
     {
         return [
-            '*' => 'qualcosa è andato storto',
-            'life.required' => 'life è required',
+            'name.required' => 'Il nome deve essere obbligatorio',
+            'name.max' => 'Il nome deve avere :max caratteri',
+            'name.min' => 'Il nome deve avere almeno :min caratteri',
+            'attack.required' => 'l\'attacco deve essere obbligatorio',
+            'defence.required' => 'la difesa deve essere obbligatoria',
+            'speed.required' => 'la velocita deve essere obbligatoria',
+            'life.required' => 'la vita deve essere obbligatoria',
         ];
     }
 }

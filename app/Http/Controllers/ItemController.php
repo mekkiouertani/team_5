@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreItemRequest;
 use App\Http\Requests\UpdateItemRequest;
 use App\Models\Item;
+use Illuminate\Support\Str;
 
 class ItemController extends Controller
 {
@@ -31,9 +32,13 @@ class ItemController extends Controller
      */
     public function store(StoreItemRequest $request)
     {
+
         $formData = $request->validated();
-        $newitem = Item::create($formData);
-        return to_route('item.index');
+        $slug = Str::slug($formData['name'], '-');
+        $formData['slug'] = $slug;
+        $item = Item::create($formData);
+
+        return redirect()->route('item.show', $item->id);
     }
 
     /**

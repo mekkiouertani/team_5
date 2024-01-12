@@ -24,7 +24,7 @@ class StoreItemRequest extends FormRequest
         return [
             'name' => 'required|max:200',
 
-            'slug' => 'required|max:200',
+            'slug' => 'max:200',
             'category' => 'required|max:100',
             'type' => 'required|max:100',
             'weight' => 'required|max:10',
@@ -34,8 +34,16 @@ class StoreItemRequest extends FormRequest
     public function messages()
     {
         return [
-            '*' => 'qualcosa è andato storto',
             'name.required' => 'nome è richiesto',
+            'name.max' => 'il nome deve essere massimo :max caratteri',
+            'category.required' => 'la categoria è richiesta',
+            'category.max' => 'la categoria deve essere massimo :max caratteri',
+            'type.required' => 'il tipo è richiesto',
+            'type.max' => 'il tipo deve essere massimo :max caratteri',
+            'weight.required' => 'il peso deve essere inserito',
+            'weight.max' => 'il peso deve essere massimo :max caratteri',
+            'cost.required' => 'il costo è richiesto',
+            'cost.max' => 'il costo deve avere massimo :max caratteri'
         ];
     }
 }
