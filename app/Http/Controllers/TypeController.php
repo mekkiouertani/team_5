@@ -13,8 +13,8 @@ class TypeController extends Controller
      */
     public function index()
     {
-        $types = Type::all();
-        return view('types.index', compact('types'));
+        $type = Type::all();
+        return view('types.index', compact('type'));
     }
 
     /**
@@ -22,7 +22,7 @@ class TypeController extends Controller
      */
     public function create()
     {
-        //
+        return view('types.create');
     }
 
     /**
@@ -30,38 +30,45 @@ class TypeController extends Controller
      */
     public function store(StoreTypeRequest $request)
     {
-        //
+        $formData = $request->validated();
+        $type = Type::create($formData);
+        return to_route('type.index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Type $type)
+    public function show(type $type)
     {
-        //
+        return view('types.show', compact('type'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Type $type)
+    public function edit(type $type)
     {
-        //
+        return view('types.edit', compact('type'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateTypeRequest $request, Type $type)
+    public function update(UpdatetypeRequest $request, type $type)
     {
-        //
+        $formData = $request->validated();
+
+        $type->fill($formData);
+        $type->update();
+        return to_route('type.show', $type->id);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Type $type)
+    public function destroy(type $type)
     {
-        //
+        $type->delete();
+        return to_route('type.index')->with('message', "Il Progetto '$type->title' è stato  eliminato");
     }
 }

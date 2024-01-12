@@ -103,7 +103,8 @@
             </div>
         </nav>
 
-        <main class="">
+        <main class="d-flex">
+            @include('partials.sidebar')
             @yield('content')
         </main>
     </div>

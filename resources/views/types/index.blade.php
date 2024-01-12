@@ -1,4 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <h1>Hello</h1>
+    <section class="container mt-5">
+        <h2>INDEX TYPE</h2>
+    </section>
 @endsection

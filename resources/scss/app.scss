@@ -25,5 +25,15 @@ h1 {
     border-bottom: 1px solid red ;
 }
 body{
-    background: linear-gradient(90deg, hsla(307, 93%, 84%, 1) 0%, hsla(256, 96%, 44%, 1) 100%);
+   /*  background-image: url(https://www.desktopbackground.org/p/2014/10/23/844505_tetris-computer-wallpapers-desktop-backgrounds_1920x1080_h.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%; */
+    background: rgb(217,217,217);
+    background: linear-gradient(128deg, rgba(217,217,217,1) 55%, rgba(150,150,150,1) 72%);
+}
+.navbar {
+    height: 80px !important;
+}
+#sidebar{
+    height: calc(100vh - 80px);
 }
