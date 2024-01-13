@@ -37,3 +37,12 @@ body{
 #sidebar{
     height: calc(100vh - 80px);
 }
+.myimg-c{
+    width: 100px;
+    img{
+        width: 100%;
+    }
+}
+.mypd{
+    padding: 0.5rem 0 0.5rem 0.5rem;
+}
