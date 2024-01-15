@@ -15,6 +15,7 @@ return new class extends Migration {
             function (Blueprint $table) {
                 $table->id();
                 $table->string('name', 200);
+                $table->string('image', 200)->nullable();
                 $table->text('description')->nullable();
                 $table->integer('type_id');
                 $table->integer('attack');
