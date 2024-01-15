@@ -8,7 +8,7 @@
     <div>{{ $type['name'] }}</div>
     <div>{{ $type['description'] }}</div>
 
-    <form action="{{ route('type.destroy', $type->id) }}" method="POST">
+    <form action="{{ route('admin.types.destroy', $type->id) }}" method="POST">
         @csrf
         @method('DELETE')
         <button class="btn btn-danger cancel-button" type="submit">
@@ -16,14 +16,14 @@
         </button>
     </form>
 
-    <form action="{{ route('type.edit', $type->id) }}" method="GET">
+    <form action="{{ route('admin.types.edit', $type->id) }}" method="GET">
         @csrf
         <button class="btn btn-warning" type="submit">
             <i class="fa-solid fa-wrench"></i>
         </button>
     </form>
 
-    <a href="{{ route('type.index') }}" style="margin-bottom: 40px; color:red;">
+    <a href="{{ route('admin.types.index') }}" style="margin-bottom: 40px; color:red;">
         back
     </a>
     @include('partials.modal_delete')

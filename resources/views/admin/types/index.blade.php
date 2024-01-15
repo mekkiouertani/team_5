@@ -1,19 +1,17 @@
 @extends('layouts.app')
-
-
 @section('content')
     <section class="container mt-5">
-        <a href="{{ route('item.create') }}" style="margin-bottom: 40px; color:red;">
-            create a new item
+        <a href="{{ route('admin.types.create') }}" style="margin-bottom: 40px; color:red;">
+            New type
         </a>
-        @foreach ($items as $item)
+        @foreach ($types as $type)
             <div>
-                {{ $item['name'] }}
+                {{ $type['name'] }}
             </div>
-            <a href="{{ route('item.show', $item->id) }}">
+            <a href="{{ route('admin.types.show', $type->id) }}">
                 info
             </a>
-            <form action="{{ route('item.destroy', $item->id) }}" method="POST">
+            <form action="{{ route('admin.types.destroy', $type->id) }}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button class="btn btn-danger cancel-button" type="submit">

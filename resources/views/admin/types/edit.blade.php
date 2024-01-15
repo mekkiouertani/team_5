@@ -16,7 +16,7 @@
         <div style="z-index:1000; top: 20vh; left: 50%; transform: translate(-50%, 0);}" id="jumbo"
             class="position-absolute">
             <section id="comic_info" class="container">
-                <form action="{{ route('type.update', $type->id) }}" method="POST"
+                <form action="{{ route('admin.types.update', $type->id) }}" method="POST"
                     class="d-flex flex-column flex-grow-1 gap-1">
                     @csrf
                     @method('PUT')

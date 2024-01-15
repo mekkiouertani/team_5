@@ -12,7 +12,7 @@
     <div>{{ $item['speed'] }}</div>
     <div>{{ $item['life'] }}</div>
 
-    <form action="{{ route('item.destroy', $item->id) }}" method="POST">
+    <form action="{{ route('admin.items.destroy', $item->id) }}" method="POST">
         @csrf
         @method('DELETE')
         <button class="btn btn-danger cancel-button" type="submit">
@@ -20,14 +20,14 @@
         </button>
     </form>
 
-    <form action="{{ route('item.edit', $item->id) }}" method="GET">
+    <form action="{{ route('admin.items.edit', $item->id) }}" method="GET">
         @csrf
         <button class="btn btn-warning" type="submit">
             <i class="fa-solid fa-wrench"></i>
         </button>
     </form>
 
-    <a href="{{ route('item.index') }}" style="margin-bottom: 40px; color:red;">
+    <a href="{{ route('admin.items.index') }}" style="margin-bottom: 40px; color:red;">
         back
     </a>
     @include('partials.modal_delete')
