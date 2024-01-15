@@ -39,7 +39,7 @@
                 <h4><i class="fa-solid fa-users"></i> Personaggi</h4>
             </div>
             <div>
-                <a href="{{ route('character.create') }}" class="btn btn-success ">New character +</a>
+                <a href="{{ route('admin.characters.create') }}" class="btn btn-success ">New character +</a>
             </div>
 
         </div>
@@ -74,7 +74,7 @@
 
                         <td class="align-middle">
 
-                            <a href="{{ route('character.show', $character->id) }}">show</a>
+                            <a href="{{ route('admin.characters.show', $character->id) }}">show</a>
 
                         </td>
                     </tr>

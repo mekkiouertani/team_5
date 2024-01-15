@@ -23,20 +23,20 @@
                                 <div class=" list-group-item  border-end pe-3">LP: {{ $character['life'] }}</div>
                             </div>
                             <div class="row row-cols-3 mt-5 pt-5 align-items-end  ">
-                                <form action="{{ route('character.destroy', $character->id) }}" method="POST">
+                                <form action="{{ route('admin.characters.destroy', $character->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-danger cancel-button" type="submit">
                                         <i class="fa-solid fa-trash "></i>
                                     </button>
                                 </form>
-                                <form action="{{ route('character.edit', $character->id) }}" method="GET">
+                                <form action="{{ route('admin.characters.edit', $character->id) }}" method="GET">
                                     @csrf
                                     <button class="btn btn-warning" type="submit">
                                         <i class="fa-solid fa-wrench"></i>
                                     </button>
                                 </form>
-                                <a href="{{ route('character.index') }}" style="margin-bottom: 40px; color:red;">
+                                <a href="{{ route('admin.characters.index') }}" style="margin-bottom: 40px; color:red;">
                                     back
                                 </a>
                             </div>
