@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
+
 
 use App\Models\Type;
 use App\Http\Requests\StoreTypeRequest;
 use App\Http\Requests\UpdateTypeRequest;
-
+use App\Http\Controllers\Controller;
 class TypeController extends Controller
 {
     /**
@@ -14,7 +15,7 @@ class TypeController extends Controller
     public function index()
     {
         $types = Type::all();
-        return view('types.index', compact('types'));
+        return view('admin.types.index', compact('types'));
     }
 
     /**
@@ -22,7 +23,7 @@ class TypeController extends Controller
      */
     public function create()
     {
-        return view('types.create');
+        return view('admin.types.create');
     }
 
     /**
@@ -32,7 +33,7 @@ class TypeController extends Controller
     {
         $formData = $request->validated();
         $type = Type::create($formData);
-        return to_route('type.index');
+        return to_route('admin.types.index');
     }
 
     /**
@@ -40,7 +41,7 @@ class TypeController extends Controller
      */
     public function show(type $type)
     {
-        return view('types.show', compact('type'));
+        return view('admin.types.show', compact('type'));
     }
 
     /**
@@ -48,7 +49,7 @@ class TypeController extends Controller
      */
     public function edit(type $type)
     {
-        return view('types.edit', compact('type'));
+        return view('admin.types.edit', compact('type'));
     }
 
     /**
@@ -60,7 +61,7 @@ class TypeController extends Controller
 
         $type->fill($formData);
         $type->update();
-        return to_route('type.show', $type->id);
+        return to_route('admin.types.show', $type->id);
     }
 
     /**
@@ -69,6 +70,6 @@ class TypeController extends Controller
     public function destroy(type $type)
     {
         $type->delete();
-        return to_route('type.index')->with('message', "Il Progetto '$type->title' è stato  eliminato");
+        return to_route('admin.types.index')->with('message', "Il Progetto '$type->title' è stato  eliminato");
     }
 }

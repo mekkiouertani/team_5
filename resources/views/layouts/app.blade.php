@@ -46,16 +46,16 @@
                                 href="{{ url('/') }}">{{ __('Home') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ Route::currentRouteName() == 'character.index' ? 'active' : '' }}""
-                                href="{{ route('character.index') }}">{{ __('Characters') }}</a>
+                            <a class="nav-link {{ Route::currentRouteName() == 'admin.characters.index' ? 'active' : '' }}"
+                                href="{{ route('admin.characters.index') }}">{{ __('characters') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ Route::currentRouteName() == 'type.index' ? 'active' : '' }}"
-                                href="{{ route('type.index') }}">{{ __('Types') }}</a>
+                            <a class="nav-link {{ Route::currentRouteName() == 'admin.types.index' ? 'active' : '' }}"
+                                href="{{ route('admin.types.index') }}">{{ __('types') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ Route::currentRouteName() == 'item.index' ? 'active' : '' }}"
-                                href="{{ route('item.index') }}">{{ __('Items') }}</a>
+                            <a class="nav-link {{ Route::currentRouteName() == 'admin.items.index' ? 'active' : '' }}"
+                                href="{{ route('admin.items.index') }}">{{ __('items') }}</a>
                         </li>
                     </ul>
 
