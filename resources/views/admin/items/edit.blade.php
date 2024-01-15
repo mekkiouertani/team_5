@@ -14,7 +14,7 @@
                 </ul>
             </div>
         @endif
-        <form action="{{ route('item.update', $item->id) }}" method="POST" class="d-flex flex-column flex-grow-1 gap-1">
+        <form action="{{ route('admin.items.update', $item->id) }}" method="POST" class="d-flex flex-column flex-grow-1 gap-1">
             @csrf
             @method('PUT')
             {{-- NAME --}}

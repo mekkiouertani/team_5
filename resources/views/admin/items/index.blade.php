@@ -3,17 +3,17 @@
 
 @section('content')
     <section class="container mt-5">
-        <a href="{{ route('item.create') }}" style="margin-bottom: 40px; color:red;">
+        <a href="{{ route('admin.items.create') }}" style="margin-bottom: 40px; color:red;">
             create a new item
         </a>
         @foreach ($items as $item)
             <div>
                 {{ $item['name'] }}
             </div>
-            <a href="{{ route('item.show', $item->id) }}">
+            <a href="{{ route('admin.items.show', $item->id) }}">
                 info
             </a>
-            <form action="{{ route('item.destroy', $item->id) }}" method="POST">
+            <form action="{{ route('admin.items.destroy', $item->id) }}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button class="btn btn-danger cancel-button" type="submit">
