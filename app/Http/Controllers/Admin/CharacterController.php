@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-
 use App\Models\Character;
 use App\Http\Requests\StoreCharacterRequest;
 use App\Http\Requests\UpdateCharacterRequest;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 class CharacterController extends Controller
 {
     /**
@@ -33,6 +33,12 @@ class CharacterController extends Controller
     public function store(StoreCharacterRequest $request)
     {
         $formData = $request->validated();
+
+        if ($request->hasFile('image')) {
+            $path = Storage::put('images', $formData['image']);
+            $formData['image'] = $path;
+        }
+
         $newCharacter = Character::create($formData);
         return to_route('admin.characters.index');
     }
