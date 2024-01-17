@@ -14,7 +14,8 @@
                 </ul>
             </div>
         @endif
-        <form action="{{ route('admin.items.update', $item->id) }}" method="POST" class="d-flex flex-column flex-grow-1 gap-1">
+        <form action="{{ route('admin.items.update', $item->id) }}" method="POST"
+            class="d-flex flex-column flex-grow-1 gap-1" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             {{-- NAME --}}
@@ -66,8 +67,22 @@
             @error('cost')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
-            {{-- BUTTON SUBMIT --}}
-            <button type="submit" class="btn btn-primary">invia</button>
+
+            <div class="mb-3">
+                <label for="image">Image</label>
+                <input type="file" class="form-control @error('image') is-invalid @enderror" name="image"
+                    id="image" value="{{ old('image') }}">
+                @error('image')
+                    <div class="invalid-feedback">{{ $message }}
+                    @enderror
+                </div>
+
+                <div class="mb-2 border d-flex justify-content-center ">
+                    <img id="uploadPreview" width="320" src="https://via.placeholder.com/1000x400" alt="preview">
+
+                </div>
+                {{-- BUTTON SUBMIT --}}
+                <button type="submit" class="btn btn-primary">invia</button>
         </form>
     </section>
 </div>

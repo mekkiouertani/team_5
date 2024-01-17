@@ -83,6 +83,9 @@ class CharacterController extends Controller
      */
     public function destroy(Character $character)
     {
+        if ($character->image) {
+            Storage::delete($character->image);
+        }
         $character->delete();
 
         return to_route('admin.characters.index')->with('message', "il fumetto $character->title è stato eliminato");
