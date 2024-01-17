@@ -40,7 +40,13 @@
                                     back
                                 </a>
                             </div>
-
+                            @if ($character->image)
+                                <div class="d-flex flex-row w-50 framed">
+                                    <img src="{{ asset('storage/' . $character->image) }}" width="100"
+                                        alt="{{ $character->name }}"
+                                        @error('image') src="https://picsum.photos/200/300" @enderror style="width: 100%">
+                                </div>
+                            @endif
                         </div>
                     </div>
 

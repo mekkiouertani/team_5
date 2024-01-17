@@ -28,6 +28,7 @@ class UpdateCharacterRequest extends FormRequest
             'defence' => 'required|integer',
             'speed' => 'required|integer',
             'life' => 'required|integer',
+            'image' => ['nullable', 'max:5120'],
         ];
     }
 
@@ -41,6 +42,7 @@ class UpdateCharacterRequest extends FormRequest
             'defence.required' => 'la difesa deve essere obbligatoria',
             'speed.required' => 'la velocita deve essere obbligatoria',
             'life.required' => 'la vita deve essere obbligatoria',
+            'image.max' => 'l\'immagine deve essere :max MB',
         ];
     }
 }

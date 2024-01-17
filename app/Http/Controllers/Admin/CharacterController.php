@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-
 use App\Models\Character;
 use App\Http\Requests\StoreCharacterRequest;
 use App\Http\Requests\UpdateCharacterRequest;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 class CharacterController extends Controller
 {
     /**
@@ -33,6 +33,12 @@ class CharacterController extends Controller
     public function store(StoreCharacterRequest $request)
     {
         $formData = $request->validated();
+
+        if ($request->hasFile('image')) {
+            $path = Storage::put('images', $formData['image']);
+            $formData['image'] = $path;
+        }
+
         $newCharacter = Character::create($formData);
         return to_route('admin.characters.index');
     }
@@ -60,8 +66,15 @@ class CharacterController extends Controller
     {
         $formData = $request->validated();
 
-        $character->fill($formData);
-        $character->update();
+        if ($request->hasFile('image')) {
+            if ($character->image) {
+                Storage::delete($character->image);
+            }
+            $imagePath = Storage::put('images', $request->image);
+            $formData['image'] = $imagePath;
+        }
+
+        $character->update($formData);
         return to_route('admin.characters.show', $character->id);
     }
 
@@ -70,6 +83,9 @@ class CharacterController extends Controller
      */
     public function destroy(Character $character)
     {
+        if ($character->image) {
+            Storage::delete($character->image);
+        }
         $character->delete();
 
         return to_route('admin.characters.index')->with('message', "il fumetto $character->title è stato eliminato");

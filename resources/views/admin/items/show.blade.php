@@ -12,6 +12,13 @@
     <div>{{ $item['speed'] }}</div>
     <div>{{ $item['life'] }}</div>
 
+    @if ($item->image)
+        <div class="d-flex flex-row w-50 framed">
+            <img src="{{ asset('storage/' . $item->image) }}" width="100" alt="{{ $item->name }}"
+                @error('image') src="https://picsum.photos/200/300" @enderror style="width: 100%">
+        </div>
+    @endif
+
     <form action="{{ route('admin.items.destroy', $item->id) }}" method="POST">
         @csrf
         @method('DELETE')

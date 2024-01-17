@@ -29,6 +29,7 @@ class StoreItemRequest extends FormRequest
             'type' => 'required|max:100',
             'weight' => 'required|max:10',
             'cost' => 'required|max:20',
+            'image' => ['nullable', 'max:5120'],
         ];
     }
     public function messages()
@@ -43,7 +44,8 @@ class StoreItemRequest extends FormRequest
             'weight.required' => 'il peso deve essere inserito',
             'weight.max' => 'il peso deve essere massimo :max caratteri',
             'cost.required' => 'il costo è richiesto',
-            'cost.max' => 'il costo deve avere massimo :max caratteri'
+            'cost.max' => 'il costo deve avere massimo :max caratteri',
+            'image.max' => 'l\'immagine deve essere :max MB',
         ];
     }
 }
