@@ -44,43 +44,45 @@
 
         </div>
 
-
-        <table class="table table-stripped">
-            <thead>
-                <tr>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Immagine</th>
-                    <th scope="col">Classe</th>
-                    <th scope="col">Azioni</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($characters as $character)
-                    <tr class=" bg-danger ">
-                        <td class="align-middle">
-                            {{ $character['name'] }}
-
-                        </td>
-                        <td>
-                            <div style="max-height=80%;">
-                                <img class="h-100" src="https://picsum.photos/50/50" alt="{{ $character['name'] }}">
-                            </div>
-                        </td>
-                        <td class="align-middle">
-
-                            {{ $character['type_id'] }}
-
-                        </td>
-
-                        <td class="align-middle">
-
-                            <a href="{{ route('admin.characters.show', $character->id) }}">show</a>
-
-                        </td>
+        <div class="scrollit">
+            <table class="table table-stripped">
+                <thead>
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Immagine</th>
+                        <th scope="col">Classe</th>
+                        <th scope="col">Azioni</th>
                     </tr>
-                @endforeach
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach ($characters as $character)
+                        <tr class=" bg-danger ">
+                            <td class="align-middle">
+                                {{ $character['name'] }}
+
+                            </td>
+                            <td>
+                                <div style="max-height=80%;">
+                                    <img class="h-100" src="https://picsum.photos/50/50" alt="{{ $character['name'] }}">
+                                </div>
+                            </td>
+                            <td class="align-middle">
+
+                                {{ $character['type_id'] }}
+
+                            </td>
+
+                            <td class="align-middle">
+
+                                <a href="{{ route('admin.characters.show', $character->id) }}">show</a>
+
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+
 
         @include('partials.modal_delete')
     </section>

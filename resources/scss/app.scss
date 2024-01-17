@@ -9,6 +9,10 @@ $fa-font-path: "../fonts/webfonts" !default;
 
 @import '~bootstrap/scss/bootstrap';
 
+#app{
+    height: 100vh;
+}
+
 h1 {
     color: $text-color;
 }
@@ -55,4 +59,9 @@ body{
 
 main{
     background-color: #222;
+}
+
+.scrollit {
+    overflow-y: auto;
+    height:600px;
 }
