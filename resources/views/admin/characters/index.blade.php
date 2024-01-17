@@ -44,7 +44,7 @@
 
         </div>
 
-        <div class="scrollit">
+        <div class="scrollit" id="style-6">
             <table class="table table-stripped">
                 <thead>
                     <tr>
