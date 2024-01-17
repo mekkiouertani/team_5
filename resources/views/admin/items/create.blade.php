@@ -3,7 +3,8 @@
 
 <div style="z-index:1000; top: 20vh; left: 50%; transform: translate(-50%, 0);}" id="jumbo" class="position-absolute">
     <section id="comic_info" class="container">
-        <form action="{{ route('admin.items.store') }}" method="POST" class="d-flex flex-column flex-grow-1 gap-1">
+        <form action="{{ route('admin.items.store') }}" method="POST" class="d-flex flex-column flex-grow-1 gap-1"
+        enctype="multipart/form-data">
             @csrf
             <label for="name">name</label>
             <input type="text" name="name" id="name" placeholder="inserisci nome"
@@ -31,6 +32,21 @@
 
             <label for="cost">cost</label>
             <input type="text" name="cost" id="cost" placeholder="cost" class="form-control text-center">
+
+            <div class="mb-3">
+                <label for="image">Image</label>
+                <input type="file" class="form-control @error('image') is-invalid @enderror" name="image"
+                    id="image" value="{{ old('image') }}">
+                @error('image')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
+
+
+            <div class="mb-2 border d-flex justify-content-center ">
+                <img id="uploadPreview" width="320" src="https://via.placeholder.com/1000x400" alt="preview">
+
+            </div>
 
             <button type="submit" class="btn btn-primary">invia</button>
         </form>

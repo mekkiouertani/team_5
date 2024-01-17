@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateItemRequest;
 use App\Models\Item;
 use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 class ItemController extends Controller
 {
     /**
@@ -32,13 +33,25 @@ class ItemController extends Controller
      */
     public function store(StoreItemRequest $request)
     {
+        // $formData = $request->validated();
+        // $slug = Str::slug($formData['name'], '-');
+        // $formData['slug'] = $slug;
+        // $item = Item::create($formData);
+
+        // return redirect()->route('admin.items.show', $item->id);
 
         $formData = $request->validated();
-        $slug = Str::slug($formData['name'], '-');
-        $formData['slug'] = $slug;
-        $item = Item::create($formData);
 
-        return redirect()->route('admin.items.show', $item->id);
+        $slug = Item::getSlug($formData['name']);
+        $formData['slug'] = $slug;
+
+        if ($request->hasFile('image')) {
+            $path = Storage::put('images', $formData['image']);
+            $formData['image'] = $path;
+        }
+
+        $newItem = Item::create($formData);
+        return to_route('admin.items.index');
     }
 
     /**
@@ -62,10 +75,28 @@ class ItemController extends Controller
      */
     public function update(UpdateItemRequest $request, Item $item)
     {
+        // $formData = $request->validated();
+
+        // $item->fill($formData);
+        // $item->update();
+        // return to_route('admin.items.show', $item->id);
+
         $formData = $request->validated();
 
-        $item->fill($formData);
-        $item->update();
+        if ($item->name !== $formData['name']) {
+            $slug = Item::getSlug($formData['name']);
+            $formData['slug'] = $slug;
+        }
+
+        if ($request->hasFile('image')) {
+            if ($item->image) {
+                Storage::delete($item->image);
+            }
+            $imagePath = Storage::put('images', $request->image);
+            $formData['image'] = $imagePath;
+        }
+
+        $item->update($formData);
         return to_route('admin.items.show', $item->id);
     }
 
@@ -74,6 +105,10 @@ class ItemController extends Controller
      */
     public function destroy(Item $item)
     {
+        if ($item->image) {
+            Storage::delete($item->image);
+        }
+
         $item->delete();
         return to_route('admin.items.index')->with('message', "il fumetto $item->title è stato eliminato");
     }
