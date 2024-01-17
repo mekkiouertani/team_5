@@ -66,8 +66,15 @@ class CharacterController extends Controller
     {
         $formData = $request->validated();
 
-        $character->fill($formData);
-        $character->update();
+        if ($request->hasFile('image')) {
+            if ($character->image) {
+                Storage::delete($character->image);
+            }
+            $imagePath = Storage::put('images', $request->image);
+            $formData['image'] = $imagePath;
+        }
+
+        $character->update($formData);
         return to_route('admin.characters.show', $character->id);
     }
 
