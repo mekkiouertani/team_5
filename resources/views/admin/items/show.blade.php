@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+{{-- @section('content')
     <h1>show printing data</h1>
 
 
@@ -38,4 +38,33 @@
         back
     </a>
     @include('partials.modal_delete')
+@endsection --}}
+
+
+@section('content')
+    <section class="container my-3" id="item-item">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1>{{ $item->name }}</h1>
+
+            <a href="{{ route('admin.items.edit', $item->id) }}" class="btn btn-success px-3">Edit</a>
+        </div>
+
+        <div>
+            <h3 class="text-light">{{ $item->weight }}</h3>
+            <h3 class="text-light">{{ $item->cost }}</h3>
+            <p>{!! $item->description !!}</p>
+
+            <img class="text-light" src="{{ asset('storage/' . $item->image) }}" alt="{{ $item->name }}">
+            {{-- @if (count($item->tags) > 0)
+                <div class="mb-3">
+                    <h4>Tags</h4>
+                    @foreach ($item->tags as $tag)
+                        <a class="badge rounded-pill text-bg-success"
+                            href="{{ route('admin.tags.show', $tag->slug) }}">{{ $tag->name }}</a>
+                    @endforeach
+
+                </div>
+            @endif --}}
+        </div>
+    </section>
 @endsection

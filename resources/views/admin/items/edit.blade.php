@@ -1,9 +1,10 @@
 @extends('layouts.app')
 
 
-<h1>EDIT</h1>
 
-<div style="z-index:1000; top: 20vh; left: 50%; transform: translate(-50%, 0);}" id="jumbo" class="position-absolute">
+<div style="z-index:1000; top: 10vh; left: 50%; transform: translate(-50%, 0);}" id="jumbo" class="position-absolute">
+    <h1>EDIT</h1>
+
     <section id="item_info" class="container">
         @if ($errors->any())
             <div class="alert alert-danger">
