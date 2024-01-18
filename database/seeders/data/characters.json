@@ -6,7 +6,8 @@
       "attack": 90,
       "defence": 75,
       "speed": 60,
-      "life": 110
+      "life": 110,
+      "items": [1,2,3]
     },
     {
       "name": "Sylanna Shadowblade",

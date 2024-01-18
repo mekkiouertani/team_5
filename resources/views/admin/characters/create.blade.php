@@ -42,20 +42,20 @@
 
                 <!--  -->
                 <!-- <div class="mb-3">
-                        <div class="form-group">
-                            <h6>Seleziona l'item</h6>
-                            @foreach ($items as $item)
+                                                <div class="form-group">
+                                                    <h6>Seleziona l'item</h6>
+                                                    @foreach ($items as $item)
     <div class="form-check @error('items') is_invalid @enderror">
-                                    <input type="checkbox"class="form-check-input" name="items[]" value="{{ $item->id }}">
-                                    {{ in_array($item->id, old('items', [])) ? 'checked' : '' }}
-                                    <label for="items" class="form-check-label">{{ $item->name }}</label>
-                                </div>
+                                                            <input type="checkbox"class="form-check-input" name="items[]" value="{{ $item->id }}">
+                                                            {{ in_array($item->id, old('items', [])) ? 'checked' : '' }}
+                                                            <label for="items" class="form-check-label">{{ $item->name }}</label>
+                                                        </div>
     @endforeach
-                            @error('items')
+                                                    @error('items')
         <div class="invalid-feedback">{{ $message }}</div>
     @enderror
-                        </div>
-                    </div> -->
+                                                </div>
+                                            </div> -->
                 <!--  -->
 
                 <div class="mb-3">
@@ -87,6 +87,24 @@
                     @enderror
                 </div>
 
+                <div class="mb-3  overflow-y-scroll " style="height: 100px; ">
+                    <h5>items</h5>
+
+                    @foreach ($items as $item)
+                        <div class="form-check @error('tags') is-invalid @enderror">
+                            <input type="checkbox" class="form-check-input" name="items[]" value="{{ $item->id }}"
+                                {{ in_array($item->id, old('item', [])) ? 'checked' : '' }}>
+                            <label class="form-check-label " style="color: white;">
+                                {{ $item->name }}
+                            </label>
+                        </div>
+                    @endforeach
+
+                    </select>
+                    @error('item_id')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
 
                 <div class="mb-2 border d-flex justify-content-center ">
                     <img id="uploadPreview" width="320" src="https://via.placeholder.com/1000x400" alt="preview">
