@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use App\Models\Character;
 
 class Item extends Model
 {
@@ -21,5 +22,10 @@ class Item extends Model
             $count++;
         }
         return $slug;
+    }
+
+    public function characters()
+    {
+        return $this->belongsToMany(Character::class);
     }
 }

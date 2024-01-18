@@ -8,6 +8,8 @@ use App\Http\Requests\StoreCharacterRequest;
 use App\Http\Requests\UpdateCharacterRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
+use App\Models\Item;
+
 class CharacterController extends Controller
 {
     /**
@@ -16,8 +18,8 @@ class CharacterController extends Controller
     public function index()
     {
         $characters = Character::all();
-
-        return view('admin.characters.index', compact('characters'));
+        $items = Item::all();
+        return view('admin.characters.index', compact('characters', 'items'));
     }
 
     /**
@@ -25,8 +27,12 @@ class CharacterController extends Controller
      */
     public function create()
     {
+
         $types = Type::all();
-        return view('admin.characters.create', compact('types'));
+        $items = Item::all();
+
+        return view('admin.characters.create', compact('items', 'types'));
+
     }
 
     /**
@@ -41,7 +47,10 @@ class CharacterController extends Controller
             $formData['image'] = $path;
         }
 
-        $newCharacter = Character::create($formData);
+        $character = Character::create($formData);
+        if ($request->has('items')) {
+            $character->items()->attach($request->items);
+        }
         return to_route('admin.characters.index');
     }
 
@@ -50,7 +59,8 @@ class CharacterController extends Controller
      */
     public function show(Character $character)
     {
-        return view('admin.characters.show', compact('character'));
+        $items = Item::all();
+        return view('admin.characters.show', compact('character', 'items'));
     }
 
     /**
@@ -58,8 +68,13 @@ class CharacterController extends Controller
      */
     public function edit(Character $character)
     {
+
         $types = Type::all();
-        return view('admin.characters.edit', compact('character', 'types'));
+        
+
+        $items = Item::all();
+        return view('admin.characters.edit', compact('character', 'types', 'items'));
+
     }
 
     /**
@@ -78,6 +93,11 @@ class CharacterController extends Controller
         }
 
         $character->update($formData);
+        if ($request->has('items')) {
+            $character->items()->sync($request->items);
+        } else {
+            $character->items()->detach();
+        }
         return to_route('admin.characters.show', $character->id);
     }
 

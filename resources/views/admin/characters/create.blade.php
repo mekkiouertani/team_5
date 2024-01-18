@@ -40,6 +40,24 @@
                 <label for="life">life</label>
                 <input type="text" name="life" id="life" placeholder="life" class="form-control text-center">
 
+                <!--  -->
+                <!-- <div class="mb-3">
+                        <div class="form-group">
+                            <h6>Seleziona l'item</h6>
+                            @foreach ($items as $item)
+    <div class="form-check @error('items') is_invalid @enderror">
+                                    <input type="checkbox"class="form-check-input" name="items[]" value="{{ $item->id }}">
+                                    {{ in_array($item->id, old('items', [])) ? 'checked' : '' }}
+                                    <label for="items" class="form-check-label">{{ $item->name }}</label>
+                                </div>
+    @endforeach
+                            @error('items')
+        <div class="invalid-feedback">{{ $message }}</div>
+    @enderror
+                        </div>
+                    </div> -->
+                <!--  -->
+
                 <div class="mb-3">
                     <label for="type_id">select a type</label>
                     <select type="text" class="form-control @error('type_id') is-invalid @enderror" name="type_id"
