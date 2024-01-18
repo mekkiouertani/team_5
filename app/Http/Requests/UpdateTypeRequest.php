@@ -23,15 +23,14 @@ class UpdateTypeRequest extends FormRequest
     {
         return [
             'name' => 'required|max:200',
-
+            'type_id' => 'nullable',
         ];
-
     }
     public function messages()
     {
         return [
             'name.required' => 'Il nome è essere obbligatorio',
-            'name.max' => 'Il nome è di massimo :max caratteri'
+            'name.max' => 'Il nome è di massimo :max caratteri',
         ];
     }
 }

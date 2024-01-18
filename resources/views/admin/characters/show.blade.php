@@ -40,6 +40,14 @@
                                     back
                                 </a>
                             </div>
+
+                            @if ($character->type_id)
+                                <div class="mb-3">
+                                    <h4>type</h4>
+                                    <a class="badge text-bg-primary"
+                                        href="{{ route('admin.types.show', $character->type->id) }}">{{ $character->type->name }}</a>
+                                </div>
+                            @endif
                             @if ($character->image)
                                 <div class="d-flex flex-row w-50 framed">
                                     <img src="{{ asset('storage/' . $character->image) }}" width="100"

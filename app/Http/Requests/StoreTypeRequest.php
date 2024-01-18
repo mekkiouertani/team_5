@@ -23,7 +23,7 @@ class StoreTypeRequest extends FormRequest
     {
         return [
             'name' => 'required|max:200',
-
+            'type_id' => 'nullable',
         ];
     }
 
@@ -31,7 +31,7 @@ class StoreTypeRequest extends FormRequest
     {
         return [
             'name.required' => 'Il nome è essere obbligatorio',
-            'name.max' => 'Il nome è di massimo :max caratteri'
+            'name.max' => 'Il nome è di massimo :max caratteri',
         ];
     }
 }
