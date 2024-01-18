@@ -40,6 +40,14 @@
                                     back
                                 </a>
                             </div>
+
+                            @if ($character->type_id)
+                                <div class="mb-3">
+                                    <h4>type</h4>
+                                    <a class="badge text-bg-primary"
+                                        href="{{ route('admin.types.show', $character->type->id) }}">{{ $character->type->name }}</a>
+                                </div>
+                            @endif
                             @if ($character->image)
                                 <div class="d-flex flex-row w-50 framed">
                                     <img src="{{ asset('storage/' . $character->image) }}" width="100"
@@ -47,6 +55,17 @@
                                         @error('image') src="https://picsum.photos/200/300" @enderror style="width: 100%">
                                 </div>
                             @endif
+                            @if ($character->items)
+                                <div class="mb-3">
+                                    <h4>items</h4>
+                                    @foreach ($character->items as $item)
+                                        <a class="badge rounded-pill text-bg-success"
+                                            href="{{ route('admin.items.show', $item->id) }}">{{ $item->name }}</a>
+                                    @endforeach
+
+                                </div>
+                            @endif
+
                         </div>
                     </div>
 

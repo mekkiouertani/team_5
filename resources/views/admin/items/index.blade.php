@@ -26,6 +26,8 @@
                         <th scope="col">Description</th>
                         <th scope="col">Edit</th>
                         <th scope="col">Delete</th>
+                        <th scope="col">Show</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -60,12 +62,21 @@
                                     title="Edit item"><i class="fa-solid fa-pen"></i></a>
                             </td>
                             <td>
-                                <form action="{{ route('admin.items.destroy', $item->slug) }}" method="POST">
+                                <form action="{{ route('admin.items.destroy', $item->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="delete-button btn btn-danger ms-3"
                                         data-item-title="{{ $item->title }}"><i
                                             class="fa-solid fa-trash-can"></i></button>
+                                </form>
+                            </td>
+
+                            <td>
+                            <form action="{{ route('admin.items.show', $item->id) }}" method="GET">
+                                    @csrf
+                                    <button type="submit" class="delete-button btn btn-success ms-3"
+                                        data-item-title="{{ $item->title }}"><i
+                                            class="fa-solid fa-eye"></i></button>
                                 </form>
                             </td>
                         </tr>

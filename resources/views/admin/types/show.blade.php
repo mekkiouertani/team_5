@@ -2,7 +2,25 @@
 
 @section('content')
     <h2>Show Type</h2>
+    @forelse ($type->characters as $character)
 
+        <div>
+            <div class="list-group-item">
+                <a href="{{ route('admin.characters.show', $character->id) }}"
+                    class="link-underline link-underline-opacity-0">
+                    {{ $character->name }}</a>
+            </div>
+
+        </div>
+
+
+        @empty
+        <div>
+            <div>
+                non ci sono progetti della tipologia {{$type->name}}
+            </div>
+        </div>
+    @endforelse
 
 
     <div>{{ $type['name'] }}</div>
