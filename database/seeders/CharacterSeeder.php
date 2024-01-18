@@ -25,7 +25,10 @@ class CharacterSeeder extends Seeder
             $newCharacter->defence = $item['defence'];
             $newCharacter->speed = $item['defence'];
             $newCharacter->life = $item['life'];
+
             $newCharacter->save();
+
+            $newCharacter->items()->sync($item['items'] ?? []);
         }
     }
 }

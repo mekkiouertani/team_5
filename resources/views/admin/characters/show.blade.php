@@ -55,6 +55,17 @@
                                         @error('image') src="https://picsum.photos/200/300" @enderror style="width: 100%">
                                 </div>
                             @endif
+                            @if ($character->items)
+                                <div class="mb-3">
+                                    <h4>items</h4>
+                                    @foreach ($character->items as $item)
+                                        <a class="badge rounded-pill text-bg-success"
+                                            href="{{ route('admin.items.show', $item->id) }}">{{ $item->name }}</a>
+                                    @endforeach
+
+                                </div>
+                            @endif
+
                         </div>
                     </div>
 

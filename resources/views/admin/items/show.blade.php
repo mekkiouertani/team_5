@@ -66,5 +66,24 @@
                 </div>
             @endif --}}
         </div>
+        @forelse ($item->characters as $character)
+            <tr>
+                <th class="list-group-item">
+                    <a href="{{ route('admin.characters.show', $character->id) }}"
+                        class="link-underline link-underline-opacity-0">
+                        {{ $character->title }}</a>
+                </th>
+                <td>
+                    {{ $character->description }}
+                </td>
+
+            </tr>
+        @empty
+            <tr>
+                <th>
+                    non ci sono progetti della tipologia {{ $item->name }}
+                </th>
+            </tr>
+        @endforelse
     </section>
 @endsection
