@@ -5,7 +5,7 @@
         <h1>Create</h1>
         <section id="comic_info" class="container">
             <form action="{{ route('admin.items.store') }}" method="POST" class="d-flex flex-column flex-grow-1 gap-1"
-                encitem="multipart/form-data">
+                enctype="multipart/form-data">
                 @csrf
                 <label for="name">name</label>
                 <input item="text" name="name" id="name" placeholder="inserisci nome"
