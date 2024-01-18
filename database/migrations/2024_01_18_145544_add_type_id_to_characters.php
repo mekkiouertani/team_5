@@ -14,7 +14,7 @@ return new class extends Migration {
             $table
                 ->unsignedBigInteger('type_id')
                 ->nullable()
-                ->after('id');
+                ->change();
             //costrained significa di andare a prendere la type con l'id ( abbiamo rispettato la convenzione dei nomi )
             $table
                 ->foreign('type_id')
@@ -31,8 +31,10 @@ return new class extends Migration {
     public function down(): void
     {
         Schema::table('characters', function (Blueprint $table) {
-            $table->dropForeign('characters_type_id_foreign');
-            $table->dropColumn('type_id');
+            // nothing
+
+            // $table->dropForeign('characters_type_id_foreign');
+            // $table->dropColumn('type_id');
         });
     }
 };
