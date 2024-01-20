@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
     <div style="z-index: 1000; top: 10vh; left: 50%; transform: translate(-50%, 0);" id="jumbo" class="position-absolute">
