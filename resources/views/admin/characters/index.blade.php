@@ -50,7 +50,6 @@
                 <thead>
                     <tr>
                         <th scope="col">Nome</th>
-                        <th scope="col">Immagine</th>
                         <th scope="col">Classe</th>
                         <th scope="col">Azioni</th>
                     </tr>
@@ -62,11 +61,6 @@
                                 {{ $character['name'] }}
 
                             </td>
-                            <td>
-                                <div style="max-height=80%;">
-                                    <img class="h-100" src="https://picsum.photos/50/50" alt="{{ $character['name'] }}">
-                                </div>
-                            </td>
                             <td class="align-middle">
 
                                 {{ $character['type_id'] }}
@@ -75,7 +69,9 @@
 
                             <td class="align-middle">
 
-                                <a href="{{ route('admin.characters.show', $character->id) }}">show</a>
+                                <a class="btn btn-success " href="{{ route('admin.characters.show', $character->id) }}">
+                                    <i class="fa-solid fa-eye "></i>
+                                </a>
 
                             </td>
                         </tr>

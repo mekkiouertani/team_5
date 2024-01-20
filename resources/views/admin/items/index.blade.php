@@ -14,7 +14,7 @@
                 {{ session()->get('message') }}
             </div>
         @endif
-        <div class="scrollit">
+        <div class="scrollit" id="style-6">
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -35,30 +35,27 @@
                         <tr>
                             <th scope="row">{{ $item->id }}</th>
                             <td>
-                                <a class=" text-decoration-none text-dark"
-                                    href="{{ route('admin.items.show', $item->slug) }}"
+                                <a class=" text-decoration-none" href="{{ route('admin.items.show', $item->id) }}"
                                     title="View item">{{ $item->name }}</a>
                             </td>
                             <td>
-                                <a class=" text-decoration-none text-dark"
-                                    href="{{ route('admin.items.show', $item->weight) }}"
+                                <a class=" text-decoration-none" href="{{ route('admin.items.show', $item->id) }}"
                                     title="View item">{{ $item->weight }}</a>
                             </td>
                             <td>
-                                <a class=" text-decoration-none text-dark"
-                                    href="{{ route('admin.items.show', $item->type) }}"
+                                <a class=" text-decoration-none" href="{{ route('admin.items.show', $item->id) }}"
                                     title="View item">{{ $item->type }}</a>
                             </td>
                             <td>
-                                <a class=" text-decoration-none text-dark"
-                                    href="{{ route('admin.items.show', $item->cost) }}"
+                                <a class=" text-decoration-none" href="{{ route('admin.items.show', $item->id) }}"
                                     title="View item">{{ $item->cost }}</a>
                             </td>
                             <td>
-                                {{ Str::limit($item->description, 100) }}</td>
+                                {{ Str::limit($item->description, 100) }}
+                            </td>
 
                             <td>
-                                <a class="link-secondary" href="{{ route('admin.items.edit', $item->id) }}"
+                                <a class="btn btn-warning " href="{{ route('admin.items.edit', $item->id) }}"
                                     title="Edit item"><i class="fa-solid fa-pen"></i></a>
                             </td>
                             <td>
@@ -72,17 +69,17 @@
                             </td>
 
                             <td>
-                            <form action="{{ route('admin.items.show', $item->id) }}" method="GET">
+                                <form action="{{ route('admin.items.show', $item->id) }}" method="GET">
                                     @csrf
                                     <button type="submit" class="delete-button btn btn-success ms-3"
-                                        data-item-title="{{ $item->title }}"><i
-                                            class="fa-solid fa-eye"></i></button>
+                                        data-item-title="{{ $item->title }}"><i class="fa-solid fa-eye"></i></button>
                                 </form>
                             </td>
                         </tr>
                     @endforeach
                 </tbody>
             </table>
+            {{ $items->links('vendor.pagination.bootstrap-5') }}
         </div>
     </section>
     @include('partials.modal_delete')

@@ -105,7 +105,9 @@ tr{
     }
     td{
         color: white!important;
-
+        a{
+            color: white!important;
+        }
     }
     &:hover{
         background-color: rgb(248, 186, 70)!important;

@@ -10,14 +10,14 @@
                 {{ session()->get('message') }}
             </div>
         @endif
-        <div class="scrollit">
+        <div class="scrollit" id="style-6">
             <table class="table table-hover">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Name</th>
                         <th scope="col">Description</th>
-                                                <th scope="col">Edit</th>
+                        <th scope="col">Edit</th>
                         <th scope="col">Delete</th>
                         <th scope="col">Show</th>
                     </tr>
@@ -27,17 +27,15 @@
                         <tr>
                             <th scope="col">{{ $type->id }}</th>
                             <td>
-                                <a class=" text-decoration-none text-dark"
-                                    href="{{ route('admin.types.show', $type->id) }}"
+                                <a class=" text-decoration-none " href="{{ route('admin.types.show', $type->id) }}"
                                     title="View type">{{ $type->name }}</a>
                             </td>
                             <td>
-                                <a class=" text-decoration-none text-dark"
-                                    href="{{ route('admin.types.show', $type->desc) }}"
+                                <a class=" text-decoration-none " href="{{ route('admin.types.show', $type->desc) }}"
                                     title="View type">{{ Str::limit($type->desc, 100, '...') }}</a>
                             </td>
                             <td>
-                                <a class="link-secondary" href="{{ route('admin.types.edit', $type->id) }}"
+                                <a class="btn btn-warning" href="{{ route('admin.types.edit', $type->id) }}"
                                     title="Edit type"><i class="fa-solid fa-pen"></i></a>
                             </td>
                             <td>
@@ -59,6 +57,7 @@
                     @endforeach
                 </tbody>
             </table>
+            {{ $types->links('vendor.pagination.bootstrap-5') }}
         </div>
         @include('partials.modal_delete')
     </section>
