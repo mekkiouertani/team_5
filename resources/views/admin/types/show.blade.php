@@ -1,48 +1,36 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
-    <h2>Show Type</h2>
-    @forelse ($type->characters as $character)
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex">
+                        <form action="{{ route('admin.types.destroy', $type->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger cancel-button me-4" type="submit">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </form>
 
-        <div>
-            <div class="list-group-item">
-                <a href="{{ route('admin.characters.show', $character->id) }}"
-                    class="link-underline link-underline-opacity-0">
-                    {{ $character->name }}</a>
+                        <form action="{{ route('admin.types.edit', $type->id) }}" method="GET">
+                            @csrf
+                            <button class="btn btn-warning" type="submit">
+                                <i class="fa-solid fa-wrench"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <button class="btn btn-danger">
+                        <a class="text-white text-decoration-none " href="{{ route('admin.types.index') }}">
+                            GO BACK
+                        </a>
+                    </button>
+                </div>
+                <h2 class="text-white">{{ $type->name }}</h2>
+                <p class="text-white">{{ $type->desc }}</p>
             </div>
-
         </div>
-
-
-        @empty
-        <div>
-            <div>
-                non ci sono progetti della tipologia {{$type->name}}
-            </div>
-        </div>
-    @endforelse
-
-
-    <div>{{ $type['name'] }}</div>
-    <div>{{ $type['description'] }}</div>
-
-    <form action="{{ route('admin.types.destroy', $type->id) }}" method="POST">
-        @csrf
-        @method('DELETE')
-        <button class="btn btn-danger cancel-button" type="submit">
-            <i class="fa-solid fa-trash"></i>
-        </button>
-    </form>
-
-    <form action="{{ route('admin.types.edit', $type->id) }}" method="GET">
-        @csrf
-        <button class="btn btn-warning" type="submit">
-            <i class="fa-solid fa-wrench"></i>
-        </button>
-    </form>
-
-    <a href="{{ route('admin.types.index') }}" style="margin-bottom: 40px; color:red;">
-        back
-    </a>
+    </div>
     @include('partials.modal_delete')
 @endsection

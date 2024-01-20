@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 
 
@@ -84,7 +84,6 @@
                 </tbody>
             </table>
         </div>
-
     </section>
     @include('partials.modal_delete')
 @endsection

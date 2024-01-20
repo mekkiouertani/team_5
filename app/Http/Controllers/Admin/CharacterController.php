@@ -17,7 +17,7 @@ class CharacterController extends Controller
      */
     public function index()
     {
-        $characters = Character::all();
+        $characters = Character::paginate(9);
         $items = Item::all();
         return view('admin.characters.index', compact('characters', 'items'));
     }
@@ -27,12 +27,10 @@ class CharacterController extends Controller
      */
     public function create()
     {
-
         $types = Type::all();
         $items = Item::all();
 
         return view('admin.characters.create', compact('items', 'types'));
-
     }
 
     /**
@@ -68,13 +66,10 @@ class CharacterController extends Controller
      */
     public function edit(Character $character)
     {
-
         $types = Type::all();
-        
 
         $items = Item::all();
         return view('admin.characters.edit', compact('character', 'types', 'items'));
-
     }
 
     /**
