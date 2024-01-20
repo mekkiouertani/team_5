@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 @section('content')
     <section class="container mt-5">
         <a href="{{ route('admin.types.create') }}" style="margin-bottom: 40px; color:red;">

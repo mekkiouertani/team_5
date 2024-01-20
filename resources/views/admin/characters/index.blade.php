@@ -1,4 +1,5 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app') --}}
+@extends('layouts.admin')
 
 @php
     // to use later for sidebar
@@ -44,8 +45,8 @@
 
         </div>
 
-        <div class="scrollit" id="style-6">
-            <table class="table table-stripped">
+        <div class="" id="style-6">
+            <table class="table table-stripped table-hover">
                 <thead>
                     <tr>
                         <th scope="col">Nome</th>
@@ -56,7 +57,7 @@
                 </thead>
                 <tbody>
                     @foreach ($characters as $character)
-                        <tr class=" bg-danger ">
+                        <tr class=" ">
                             <td class="align-middle">
                                 {{ $character['name'] }}
 
@@ -81,9 +82,11 @@
                     @endforeach
                 </tbody>
             </table>
+            {{ $characters->links('vendor.pagination.bootstrap-5') }}
         </div>
 
 
         @include('partials.modal_delete')
+        {{-- @include('vendor.pagination.bootstrap-5') --}}
     </section>
 @endsection
