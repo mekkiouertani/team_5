@@ -3,7 +3,7 @@
         <div class="sb-sidenav-menu" id="style-6">
             <div class="nav">
                 <div class="sb-sidenav-menu-heading">Core</div>
-                <a class="nav-link" href="{{ route('admin.dashboard') }}">
+                <a class="nav-link {{ request()->is('admin') ? 'active' : '' }}" href="{{ route('admin.dashboard') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Dashboard
                 </a>
@@ -11,39 +11,45 @@
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePosts"
                     aria-expanded="false" aria-controls="collapsePosts">
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-person"></i></div>
-                    characters
+                    <h6 class="nav-t mt-2 {{ request()->is('admin/characters*') ? 'active' : '' }}">Character</h6>
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
                 <div class="collapse" id="collapsePosts" aria-labelledby="headingOne"
                     data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="{{ route('admin.characters.index') }}">All characters</a>
-                        <a class="nav-link" href="{{ route('admin.characters.create') }}">Create new character</a>
+                        <a class="nav-link {{ request()->is('admin/characters') ? 'active' : '' }}"
+                            href="{{ route('admin.characters.index') }}">All Characters</a>
+                        <a class="nav-link {{ request()->is('admin/characters/create') ? 'active' : '' }}"
+                            href="{{ route('admin.characters.create') }}">Create New Character</a>
                     </nav>
                 </div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                     data-bs-target="#collapseCategories" aria-expanded="false" aria-controls="collapseCategories">
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-list"></i></div>
-                    types
+                    <h6 class="nav-t mt-2 {{ request()->is('admin/types*') ? 'active' : '' }}">Types</h6>
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
                 <div class="collapse" id="collapseCategories" aria-labelledby="headingOne"
                     data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="{{ route('admin.types.index') }}">All types</a>
-                        <a class="nav-link" href="{{ route('admin.types.create') }}">Create new type</a>
+                        <a class="nav-link {{ request()->is('admin/types') ? 'active' : '' }}"
+                            href="{{ route('admin.types.index') }}">All Types</a>
+                        <a class="nav-link {{ request()->is('admin/types/create') ? 'active' : '' }}"
+                            href="{{ route('admin.types.create') }}">Create New Type</a>
                     </nav>
                 </div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTags"
                     aria-expanded="false" aria-controls="collapseTags">
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-cube"></i></i></div>
-                    Items
+                    <h6 class="nav-t mt-2 {{ request()->is('admin/items*') ? 'active' : '' }}">Items</h6>
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
                 <div class="collapse" id="collapseTags" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="{{ route('admin.items.index') }}">All items</a>
-                        <a class="nav-link" href="{{ route('admin.items.create') }}">Create new item</a>
+                        <a class="nav-link {{ request()->is('admin/items') ? 'active' : '' }}"
+                            href="{{ route('admin.items.index') }}">All Items</a>
+                        <a class="nav-link {{ request()->is('admin/items/create') ? 'active' : '' }}"
+                            href="{{ route('admin.items.create') }}">Create New Item</a>
                     </nav>
                 </div>
 
@@ -79,7 +85,7 @@
                         </div>
                     </nav>
                 </div>
-                <div class="sb-sidenav-menu-heading">Addons</div>
+                {{-- <div class="sb-sidenav-menu-heading">Addons</div>
                 <a class="nav-link" href="charts.html">
                     <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                     Charts
@@ -87,7 +93,7 @@
                 <a class="nav-link" href="tables.html">
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                     Tables
-                </a>
+                </a> --}}
             </div>
         </div>
         <div class="sb-sidenav-footer">
