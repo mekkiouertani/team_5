@@ -9,9 +9,10 @@ $fa-font-path: "../fonts/webfonts" !default;
 
 @import '~bootstrap/scss/bootstrap';
 
-#app{
-    height: 100vh;
-}
+/* #app{
+    min-height: 100vh;
+    background-color: #222;
+} */
 
 h1 {
     color: $text-color;
@@ -32,11 +33,13 @@ h1 {
     border-bottom: 1px solid red ;
 }
 body{
+    background-color: #aaaaaa;
+    /* background-color: #222; */
    /*  background-image: url(https://www.desktopbackground.org/p/2014/10/23/844505_tetris-computer-wallpapers-desktop-backgrounds_1920x1080_h.jpg);
     background-repeat: no-repeat;
     background-size: 100%; */
-    background: rgb(217,217,217);
-    background: linear-gradient(128deg, rgba(217,217,217,1) 55%, rgba(150,150,150,1) 72%);
+   /*  background: rgb(217,217,217);
+    background: linear-gradient(128deg, rgba(217,217,217,1) 55%, rgba(150,150,150,1) 72%); */
 }
 .navbar {
     height: 80px !important;
@@ -60,9 +63,10 @@ body{
 
 }
 
-main{
+/* main{
+    min-height: 100%;
     background-color: #222;
-}
+} */
 
 .scrollit {
     overflow-y: auto;
