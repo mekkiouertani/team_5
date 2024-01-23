@@ -34,7 +34,7 @@
 @endphp
 
 @section('content')
-    <section class="container mt-5 p-3 text-light overflow-y-auto " style="background-color: #222222">
+    <section class="container mt-5 p-3 text-light  " style="background-color: #222222">
         <div class="d-flex justify-content-between align-items-center mypd ">
             <div>
                 <h4><i class="fa-solid fa-users"></i> Personaggi</h4>
