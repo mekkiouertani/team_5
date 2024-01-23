@@ -12,11 +12,18 @@ class TypeController extends Controller
     {
         $types = Type::all();
 
-        return response()->json(
-            [
-                'success' => true,
-                'results' => $types
-            ]
-        );
+        return response()->json([
+            'success' => true,
+            'results' => $types,
+        ]);
+    }
+
+    public function show($slug)
+    {
+        $type = Type::where('slug', $slug)->first();
+        return response()->json([
+            'success' => true,
+            'results' => $type,
+        ]);
     }
 }

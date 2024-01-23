@@ -12,12 +12,18 @@ class ItemController extends Controller
     {
         $items = Item::all();
 
-        return response()->json(
-            [
-                'success' => true,
-                'results' => $items,
-            ]
-        );
+        return response()->json([
+            'success' => true,
+            'results' => $items,
+        ]);
+    }
 
+    public function show($slug)
+    {
+        $item = Item::where('slug', $slug)->first();
+        return response()->json([
+            'success' => true,
+            'results' => $item,
+        ]);
     }
 }
