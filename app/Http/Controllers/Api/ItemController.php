@@ -18,9 +18,9 @@ class ItemController extends Controller
         ]);
     }
 
-    public function show($slug)
+    public function show($id)
     {
-        $item = Item::where('slug', $slug)->first();
+        $item = Item::where('id', $id)->first();
         return response()->json([
             'success' => true,
             'results' => $item,

@@ -19,9 +19,9 @@ class CharacterController extends Controller
         );
     }
 
-    public function show($slug)
+    public function show($id)
     {
-        $character = Character::where('slug', $slug)->with(['items', ' type'])->first();
+        $character = Character::where('id', $id)->first();
         return response()->json(
             [
                 'success' => true,

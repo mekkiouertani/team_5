@@ -23,13 +23,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('characters', [CharacterController::class, 'index']);
-Route::get('characters/{slug}', [CharacterController::class, 'show']);
+Route::get('characters/{id}', [CharacterController::class, 'show']);
 
 Route::get('items', [ItemController::class, 'index']);
-Route::get('items/{slug}', [ItemController::class, 'show']);
+Route::get('items/{id}', [ItemController::class, 'show']);
 
 
 Route::get('types', [TypeController::class, 'index']);
-Route::get('types/{slug}', [TypeController::class, 'show']);
+Route::get('types/{id}', [TypeController::class, 'show']);
 
 

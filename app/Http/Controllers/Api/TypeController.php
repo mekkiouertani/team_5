@@ -18,9 +18,9 @@ class TypeController extends Controller
         ]);
     }
 
-    public function show($slug)
+    public function show($id)
     {
-        $type = Type::where('slug', $slug)->first();
+        $type = Type::where('id', $id)->first();
         return response()->json([
             'success' => true,
             'results' => $type,
