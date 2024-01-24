@@ -10,7 +10,7 @@ class ItemController extends Controller
 {
     public function index()
     {
-        $items = Item::all();
+        $items = Item::paginate(9);
 
         return response()->json([
             'success' => true,
