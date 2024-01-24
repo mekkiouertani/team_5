@@ -10,7 +10,7 @@ class CharacterController extends Controller
 {
     public function index()
     {
-        $characters = Character::paginate(3);
+        $characters = Character::paginate(9);
         return response()->json(
             [
                 'success' => true,
