@@ -3,7 +3,7 @@
 
 
 @section('content')
-    <section class="container">
+    <section class="container mt-5">
         <h1>item List</h1>
         <div class="text-end">
             <a class="btn btn-success" href="{{ route('admin.items.create') }}">Crea nuovo item</a>

@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="container mt-3">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-12">
                 <div class="d-flex justify-content-between align-items-center">
@@ -28,7 +28,7 @@
                     </button>
                 </div>
 
-                <div class="card">
+                <div class="card mt-3">
                     <div class="d-flex justify-content-between align-items-center p-5">
                         <div class="my-img-cont">
                             <img src={{ asset('storage/' . $type->image) }} class="card-img-top" alt={{ $type->name }}>
