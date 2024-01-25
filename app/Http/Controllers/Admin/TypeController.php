@@ -7,6 +7,9 @@ use App\Http\Requests\StoreTypeRequest;
 use App\Http\Requests\UpdateTypeRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
+
+
 class TypeController extends Controller
 {
     /**
@@ -31,9 +34,17 @@ class TypeController extends Controller
      */
     public function store(StoreTypeRequest $request)
     {
+
         $formData = $request->validated();
+
+        if ($request->hasFile('image')) {
+            $path = Storage::put('images', $formData['image']);
+            $formData['image'] = $path;
+        }
+
         $type = Type::create($formData);
-        return to_route('admin.types.index');
+
+        return to_route('admin.types.index', compact('type'));
     }
 
     /**

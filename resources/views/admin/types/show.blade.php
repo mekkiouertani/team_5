@@ -40,6 +40,7 @@
                         <p class="card-text">{{ $type->desc }}</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

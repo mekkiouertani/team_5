@@ -1,5 +1,6 @@
 [
   {
+    "image": "/images/items/club.png",
     "name": "Club",
     "slug": "club",
     "type": "Weapons",
@@ -8,6 +9,7 @@
     "cost": "1 sp"
   },
   {
+    "image": "/images/items/light-amel.png",
     "name": "Dagger",
     "slug": "dagger",
     "type": "Weapons",
@@ -16,6 +18,7 @@
     "cost": "2 gp"
   },
   {
+    "image": "/images/items/club2.png",
     "name": "Greatclub",
     "slug": "greatclub",
     "type": "Weapons",
@@ -24,6 +27,7 @@
     "cost": "2 sp"
   },
   {
+    "image": "/images/items/dagger.png",
     "name": "Handaxe",
     "slug": "handaxe",
     "type": "Weapons",
@@ -32,6 +36,7 @@
     "cost": "5 gp"
   },
   {
+    "image": "/images/items/jav-axe.png",
     "name": "Javelin",
     "slug": "javelin",
     "type": "Weapons",
@@ -40,22 +45,7 @@
     "cost": "5 sp"
   },
   {
-    "name": "Light hammer",
-    "slug": "light-hammer",
-    "type": "Weapons",
-    "category": "Simple Melee Weapons",
-    "weight": "2 lb.",
-    "cost": "2 gp"
-  },
-  {
-    "name": "Mace",
-    "slug": "mace",
-    "type": "Weapons",
-    "category": "Simple Melee Weapons",
-    "weight": "4 lb.",
-    "cost": "5 gp"
-  },
-  {
+    "image": "/images/items/quarterstaf.png",
     "name": "Quarterstaff",
     "slug": "quarterstaff",
     "type": "Weapons",
@@ -64,14 +54,7 @@
     "cost": "2 sp"
   },
   {
-    "name": "Sickle",
-    "slug": "sickle",
-    "type": "Weapons",
-    "category": "Simple Melee Weapons",
-    "weight": "2 lb.",
-    "cost": "1 gp"
-  },
-  {
+    "image": "/images/items/speav.png",
     "name": "Spear",
     "slug": "spear",
     "type": "Weapons",
@@ -80,6 +63,7 @@
     "cost": "1 gp"
   },
   {
+    "image": "/images/items/crossbowl.png",
     "name": "Crossbow, light",
     "slug": "crossbow-light",
     "type": "Weapons",
@@ -88,6 +72,7 @@
     "cost": "25 gp"
   },
   {
+    "image": "/images/items/morthand.png",
     "name": "Dart",
     "slug": "dart",
     "type": "Weapons",
@@ -96,6 +81,7 @@
     "cost": "5 cp"
   },
   {
+    "image": "/images/items/short-ape.png",
     "name": "Shortbow",
     "slug": "shortbow",
     "type": "Weapons",
@@ -104,6 +90,7 @@
     "cost": "25 gp"
   },
   {
+    "image": "/images/items/pike-arc.png",
     "name": "Sling",
     "slug": "sling",
     "type": "Weapons",
@@ -112,6 +99,7 @@
     "cost": "1 sp"
   },
   {
+    "image": "/images/items/jave-axe.png",
     "name": "Battleaxe",
     "slug": "battleaxe",
     "type": "Weapons",
@@ -120,6 +108,7 @@
     "cost": "10 gp"
   },
   {
+    "image": "/images/items/quarterstaf.png",
     "name": "Flail",
     "slug": "flail",
     "type": "Weapons",
@@ -128,6 +117,7 @@
     "cost": "10 gp"
   },
   {
+    "image": "/images/items/javellale.png",
     "name": "Glaive",
     "slug": "glaive",
     "type": "Weapons",
@@ -136,6 +126,7 @@
     "cost": "20 gp"
   },
   {
+    "image": "/images/items/great-hammer.png",
     "name": "Greataxe",
     "slug": "greataxe",
     "type": "Weapons",
@@ -144,22 +135,7 @@
     "cost": "30 gp"
   },
   {
-    "name": "Greatsword",
-    "slug": "greatsword",
-    "type": "Weapons",
-    "category": "Martial Melee Weapons",
-    "weight": "6 lb.",
-    "cost": "50 gp"
-  },
-  {
-    "name": "Halberd",
-    "slug": "halberd",
-    "type": "Weapons",
-    "category": "Martial Melee Weapons",
-    "weight": "6 lb.",
-    "cost": "20 gp"
-  },
-  {
+    "image": "images/items/langhamer.png",
     "name": "Lance",
     "slug": "lance",
     "type": "Weapons",
@@ -168,6 +144,7 @@
     "cost": "10 gp"
   },
   {
+    "image": "images/items/longbow.png",
     "name": "Longsword",
     "slug": "longsword",
     "type": "Weapons",
@@ -176,121 +153,12 @@
     "cost": "15 gp"
   },
   {
+    "image": "images/items/pike.png",
     "name": "Maul",
     "slug": "maul",
     "type": "Weapons",
     "category": "Martial Melee Weapons",
     "weight": "10 lb.",
     "cost": "10 gp"
-  },
-  {
-    "name": "Morningstar",
-    "slug": "morningstar",
-    "type": "Weapons",
-    "category": "Martial Melee Weapons",
-    "weight": "4 lb.",
-    "cost": "15 gp"
-  },
-  {
-    "name": "Pike",
-    "slug": "pike",
-    "type": "Weapons",
-    "category": "Martial Melee Weapons",
-    "weight": "18 lb.",
-    "cost": "5 gp"
-  },
-  {
-    "name": "Rapier",
-    "slug": "rapier",
-    "type": "Weapons",
-    "category": "Martial Melee Weapons",
-    "weight": "2 lb.",
-    "cost": "25 gp"
-  },
-  {
-    "name": "Scimitar",
-    "slug": "scimitar",
-    "type": "Weapons",
-    "category": "Martial Melee Weapons",
-    "weight": "3 lb.",
-    "cost": "25 gp"
-  },
-  {
-    "name": "Shortsword",
-    "slug": "shortsword",
-    "type": "Weapons",
-    "category": "Martial Melee Weapons",
-    "weight": "2 lb.",
-    "cost": "10 gp"
-  },
-  {
-    "name": "Trident",
-    "slug": "trident",
-    "type": "Weapons",
-    "category": "Martial Melee Weapons",
-    "weight": "4 lb.",
-    "cost": "5 gp"
-  },
-  {
-    "name": "War pick",
-    "slug": "war-pick",
-    "type": "Weapons",
-    "category": "Martial Melee Weapons",
-    "weight": "2 lb.",
-    "cost": "5 gp"
-  },
-  {
-    "name": "Warhammer",
-    "slug": "warhammer",
-    "type": "Weapons",
-    "category": "Martial Melee Weapons",
-    "weight": "2 lb.",
-    "cost": "15 gp"
-  },
-  {
-    "name": "Whip",
-    "slug": "whip",
-    "type": "Weapons",
-    "category": "Martial Melee Weapons",
-    "weight": "3 lb.",
-    "cost": "2 gp"
-  },
-  {
-    "name": "Blowgun",
-    "slug": "blowgun",
-    "type": "Weapons",
-    "category": "Martial Ranged Weapons",
-    "weight": "1 lb.",
-    "cost": "10 gp" },
-  {
-    "name": "Crossbow, hand",
-    "slug": "crossbow-hand",
-    "type": "Weapons",
-    "category": "Martial Ranged Weapons",
-    "weight": "3 lb.",
-    "cost": "75 gp"
-  },
-  {
-    "name": "Crossbow, heavy",
-    "slug": "crossbow-heavy",
-    "type": "Weapons",
-    "category": "Martial Ranged Weapons",
-    "weight": "18 lb.",
-    "cost": "50 gp"
-  },
-  {
-    "name": "Longbow",
-    "slug": "longbow",
-    "type": "Weapons",
-    "category": "Martial Ranged Weapons",
-    "weight": "2 lb.",
-    "cost": "50 gp"
-  },
-  {
-    "name": "Net",
-    "slug": "net",
-    "type": "Weapons",
-    "category": "Martial Ranged Weapons",
-    "weight": "3 lb.",
-    "cost": "1 gp" }
+  }
 ]
