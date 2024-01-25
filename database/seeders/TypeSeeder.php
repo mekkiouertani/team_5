@@ -19,8 +19,12 @@ class TypeSeeder extends Seeder
         foreach ($data as $item) {
             $newType = new Type();
             $newType->name = $item['name'];
+            $newType->image = $item['image'];
             $newType->desc = $item['desc'];
             $newType->save();
         }
     }
 }
+
+
+// storage/app/public/images/types/image1x1.png

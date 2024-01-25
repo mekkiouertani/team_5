@@ -21,6 +21,7 @@ class ItemSeeder extends Seeder
             $newItem = new Item();
             $newItem->name = $item['name'];
             $newItem->type = $item['type'];
+            $newItem->image = $item['image'];
             $newItem->category = $item['category'];
             $newItem->weight = $item['weight'];
             $newItem->cost = $item['cost'];

@@ -27,8 +27,18 @@
                         </a>
                     </button>
                 </div>
-                <h2 class="text-white">{{ $type->name }}</h2>
-                <p class="text-white">{{ $type->desc }}</p>
+                <section class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <img src="{{ asset('storage/' . $type->image) }}" alt="{{ $type->name }}">
+                    </div>
+                    <div>
+                        <h1>{{ $type->id }}</h1>
+                        <h2 class="text-white">{{ $type->name }}</h2>
+                        <p class="text-white">{!! $type->desc !!}</p>
+                    </div>
+
+                </section>
+
             </div>
         </div>
     </div>

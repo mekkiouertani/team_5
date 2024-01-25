@@ -1,5 +1,6 @@
 [
     {
+      "image": "images/characters/image1x1.png",
       "name": "Gideon Ironheart",
       "description": "A fearless knight known for his unwavering resolve.",
       "type_id": 1,
@@ -10,6 +11,7 @@
       "items": [1,2,3]
     },
     {
+      "image": "images/characters/image1x2.png",
       "name": "Sylanna Shadowblade",
       "description": "A stealthy rogue with deadly precision.",
       "type_id": 2,
@@ -19,6 +21,7 @@
       "life": 85
     },
     {
+      "image": "images/characters/image1x3.png",
       "name": "Ignis Firecaster",
       "description": "A masterful mage wielding the power of fire.",
       "type_id": 3,
@@ -28,6 +31,7 @@
       "life": 95
     },
     {
+      "image": "images/characters/image1x4.png",
       "name": "Thalia Swiftwind",
       "description": "An agile elf archer with unparalleled speed.",
       "type_id": 2,
@@ -37,6 +41,7 @@
       "life": 80
     },
     {
+      "image": "images/characters/image2x1.png",
       "name": "Darius Stoneshield",
       "description": "A stoic dwarf defender with a mighty shield.",
       "type_id": 1,
@@ -46,6 +51,7 @@
       "life": 120
     },
     {
+      "image": "images/characters/image2x2.png",
       "name": "Luna Moonshadow",
       "description": "A mystical sorceress attuned to the moon's magic.",
       "type_id": 3,
@@ -55,6 +61,7 @@
       "life": 90
     },
     {
+      "image": "images/characters/image2x3.png",
       "name": "Aurelius Stormbringer",
       "description": "A charismatic paladin with lightning-infused attacks.",
       "type_id": 1,
@@ -64,6 +71,7 @@
       "life": 105
     },
     {
+      "image": "images/characters/image2x4.png",
       "name": "Fiona Frostheart",
       "description": "An ice mage capable of freezing enemies in their tracks.",
       "type_id": 3,
@@ -73,6 +81,7 @@
       "life": 100
     },
     {
+      "image": "images/characters/image3x1.png",
       "name": "Cyrus Darkblade",
       "description": "A brooding and powerful dark knight seeking redemption.",
       "type_id": 1,
@@ -82,6 +91,7 @@
       "life": 115
     },
     {
+      "image": "images/characters/image3x2.png",
       "name": "Seraphina Sunfire",
       "description": "A radiant cleric healing allies with divine energy.",
       "type_id": 4,
@@ -91,6 +101,7 @@
       "life": 95
     },
     {
+      "image": "images/characters/image3x3.png",
       "name": "Ragnar Thunderaxe",
       "description": "A burly barbarian wielding a massive thundering axe.",
       "type_id": 1,
@@ -100,6 +111,7 @@
       "life": 125
     },
     {
+      "image": "images/characters/image3x3.png",
       "name": "Lyra Starfall",
       "description": "An enigmatic celestial mage with star-infused spells.",
       "type_id": 3,
@@ -109,6 +121,7 @@
       "life": 90
     },
     {
+      "image": "images/characters/image3x4.png",
       "name": "Kai Shadowsong",
       "description": "A nimble and deadly ninja moving in the shadows.",
       "type_id": 2,
@@ -118,6 +131,7 @@
       "life": 82
     },
     {
+      "image": "images/characters/image3x4.png",
       "name": "Isabella Ironrose",
       "description": "A skilled duelist with a combination of grace and strength.",
       "type_id": 2,
@@ -127,6 +141,7 @@
       "life": 88
     },
     {
+      "image": "images/characters/image4x1.png",
       "name": "Lucius Blackthorn",
       "description": "A mysterious warlock harnessing the power of shadows.",
       "type_id": 3,
@@ -136,6 +151,7 @@
       "life": 92
     },
     {
+      "image": "images/characters/image4x2.png",
       "name": "Elysia Moonlight",
       "description": "A moonlit archer with a mystical connection to nature.",
       "type_id": 2,
@@ -145,6 +161,7 @@
       "life": 85
     },
     {
+      "image": "images/characters/image4x3.png",
       "name": "Orik Thunderfist",
       "description": "A dwarf berserker fueled by the power of thunder.",
       "type_id": 1,
@@ -154,6 +171,7 @@
       "life": 118
     },
     {
+      "image": "images/characters/image4x4.png",
       "name": "Aria Stormshaper",
       "description": "A tempest sorceress controlling the fury of storms.",
       "type_id": 3,
@@ -163,6 +181,7 @@
       "life": 94
     },
     {
+      "image": "images/characters/image4x12.png",
       "name": "Kieran Frostwind",
       "description": "A swift and agile rogue with an icy touch.",
       "type_id": 2,
@@ -172,6 +191,7 @@
       "life": 84
     },
     {
+      "image": "images/characters/image4x22.png",
       "name": "Valeria Swiftstrike",
       "description": "A dual-wielding warrior with unmatched speed in combat.",
       "type_id": 1,

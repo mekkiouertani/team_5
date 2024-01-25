@@ -9,6 +9,7 @@
                 <div class="col-12 p-2 m-3 rounded-3  " style="background-color: #222222 ">
                     <div class="card h-100  "style="background-color: #F7AD19 ">
                         <div class=" card-body text-center text-light ">
+                            <img src="{{ asset('storage/' . $character->image) }}" alt="">
                             <div class="p-3 rounded-3 bg-opacity-25   " style="background-color: #222222 ">
                                 <h1 class=" card-title text-uppercase fw-bold ">{{ $character['name'] }}</h1>
                             </div>

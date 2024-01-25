@@ -19,6 +19,7 @@ class CharacterSeeder extends Seeder
         foreach ($data as $item) {
             $newCharacter = new Character();
             $newCharacter->name = $item['name'];
+            $newCharacter->image = $item['image'];
             $newCharacter->description = $item['description'];
             $newCharacter->type_id = $item['type_id'];
             $newCharacter->attack = $item['attack'];
