@@ -1,10 +1,11 @@
 @extends('layouts.admin')
 @section('content')
-    <section class="container">
-        <h1>Types List</h1>
-        <div class="text-end">
+    <section class="container ">
+        <div class="pt-5 mb-3 d-flex justify-content-between align-items-center">
+            <h1>Types List</h1>
             <a class="btn btn-success" href="{{ route('admin.types.create') }}">Crea nuovo type</a>
         </div>
+
         @if (session()->has('message'))
             <div class="alert alert-success mb-3 mt-3">
                 {{ session()->get('message') }}

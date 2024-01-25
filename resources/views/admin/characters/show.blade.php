@@ -3,14 +3,16 @@
 @section('content')
     {{-- <h1>show printing data</h1> --}}
 
-    <div class="container mx-auto  ">
-        <div class="container-sm h-100   ">
+    <div class="container mt-5  ">
+        <div class="container-sm   ">
             <div class="row h-100 mx-auto my-auto w-75 justify-content-center text-center ">
                 <div class="col-12 p-2 m-3 rounded-3  " style="background-color: #222222 ">
                     <div class="card h-100  "style="background-color: #F7AD19 ">
                         <div class=" card-body text-center text-light ">
                             <img src="{{ asset('storage/' . $character->image) }}" alt="">
                             <div class="p-3 rounded-3 bg-opacity-25   " style="background-color: #222222 ">
+                                <img class=",b-3" src="{{ asset('storage/' . $character->image) }}" width="300"
+                                    alt="{{ $character->name }}">
                                 <h1 class=" card-title text-uppercase fw-bold ">{{ $character['name'] }}</h1>
                             </div>
 
@@ -51,9 +53,8 @@
                             @endif
                             @if ($character->image)
                                 <div class="d-flex flex-row w-50 framed">
-                                    <img src="{{ asset('storage/' . $character->image) }}" width="100"
-                                        alt="{{ $character->name }}"
-                                        @error('image') src="https://picsum.photos/200/300" @enderror style="width: 100%">
+
+
                                 </div>
                             @endif
                             @if ($character->items)

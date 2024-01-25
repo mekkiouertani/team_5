@@ -34,10 +34,10 @@
 @endphp
 
 @section('content')
-    <section class="container mt-5 p-3 text-light  " style="background-color: #222222">
-        <div class="d-flex justify-content-between align-items-center mypd ">
+    <section class="container mt-5 p-3 ">
+        <div class="d-flex justify-content-between align-items-center ">
             <div>
-                <h4><i class="fa-solid fa-users"></i> Personaggi</h4>
+                <h1><i class="fa-solid fa-users"></i> Personaggi</h1>
             </div>
             <div>
                 <a href="{{ route('admin.characters.create') }}" class="btn btn-success ">New character +</a>
@@ -45,7 +45,7 @@
 
         </div>
 
-        <div class="" id="style-6">
+        <div class="">
             <table class="table table-stripped table-hover">
                 <thead>
                     <tr>

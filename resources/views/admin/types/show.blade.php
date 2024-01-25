@@ -27,17 +27,19 @@
                         </a>
                     </button>
                 </div>
-                <section class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <img src="{{ asset('storage/' . $type->image) }}" alt="{{ $type->name }}">
-                    </div>
-                    <div>
-                        <h1>{{ $type->id }}</h1>
-                        <h2 class="text-white">{{ $type->name }}</h2>
-                        <p class="text-white">{!! $type->desc !!}</p>
+
+                <div class="card">
+                    <div class="d-flex justify-content-between align-items-center p-5">
+                        <div class="my-img-cont">
+                            <img src={{ asset('storage/' . $type->image) }} class="card-img-top" alt={{ $type->name }}>
+                        </div>
+                        <h1>{{ $type->name }}</h1>
                     </div>
 
-                </section>
+                    <div class="card-body">
+                        <p class="card-text">{{ $type->desc }}</p>
+                    </div>
+                </div>
 
             </div>
         </div>
