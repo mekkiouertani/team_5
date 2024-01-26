@@ -26,7 +26,7 @@ class UpdateItemRequest extends FormRequest
             'slug' => 'max:200',
             'category' => 'required|max:100',
             'type' => 'required|max:100',
-            'weight' => 'required|max:10',
+            'weight' => 'required',
             'cost' => 'required|max:20',
             'image' => ['nullable', 'max:5120'],
         ];
@@ -41,7 +41,7 @@ class UpdateItemRequest extends FormRequest
             'type.required' => 'il tipo è richiesto',
             'type.max' => 'il tipo deve essere massimo :max caratteri',
             'weight.required' => 'il peso deve essere inserito',
-            'weight.max' => 'il peso deve essere massimo :max caratteri',
+
             'cost.required' => 'il costo è richiesto',
             'cost.max' => 'il costo deve avere massimo :max caratteri',
             'image.max' => 'l\'immagine deve essere :max MB',

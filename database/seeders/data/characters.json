@@ -7,8 +7,7 @@
       "attack": 90,
       "defence": 75,
       "speed": 60,
-      "life": 110,
-      "items": [1,2,3]
+      "life": 110
     },
     {
       "image": "images/characters/image1x2.png",
