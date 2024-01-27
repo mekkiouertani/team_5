@@ -9,7 +9,7 @@
     "cost": "1 sp"
   },
   {
-    "image": "/images/items/light-amel.png",
+    "image": "/images/items/dagger.png",
     "name": "Dagger",
     "slug": "dagger",
     "type": "Weapons",
@@ -63,8 +63,8 @@
     "cost": "1 gp"
   },
   {
-    "image": "/images/items/crossbowl.png",
-    "name": "Crossbow, light",
+    "image": "/images/items/crossbow.png",
+    "name": "Crossbow-light",
     "slug": "crossbow-light",
     "type": "Weapons",
     "category": "Simple Ranged Weapons",
@@ -72,7 +72,7 @@
     "cost": "25 gp"
   },
   {
-    "image": "/images/items/morthand.png",
+    "image": "/images/items/morthad.png",
     "name": "Dart",
     "slug": "dart",
     "type": "Weapons",
@@ -99,7 +99,7 @@
     "cost": "1 sp"
   },
   {
-    "image": "/images/items/jave-axe.png",
+    "image": "/images/items/jav-axe.png",
     "name": "Battleaxe",
     "slug": "battleaxe",
     "type": "Weapons",
@@ -135,7 +135,7 @@
     "cost": "30 gp"
   },
   {
-    "image": "images/items/langhamer.png",
+    "image": "/images/items/langhamer.png",
     "name": "Lance",
     "slug": "lance",
     "type": "Weapons",
@@ -144,7 +144,7 @@
     "cost": "10 gp"
   },
   {
-    "image": "images/items/longbow.png",
+    "image": "/images/items/lognbow.png",
     "name": "Longsword",
     "slug": "longsword",
     "type": "Weapons",
@@ -153,7 +153,7 @@
     "cost": "15 gp"
   },
   {
-    "image": "images/items/pike.png",
+    "image": "/images/items/pike.png",
     "name": "Maul",
     "slug": "maul",
     "type": "Weapons",
